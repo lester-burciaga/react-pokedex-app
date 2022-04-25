@@ -1,4 +1,4 @@
-import { Pokemon } from "../types/types";
+import { Pokemon } from "@model/types";
 
 function PokemonInfo(props: { data?: Pokemon }) {
   return (

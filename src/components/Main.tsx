@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Card from "../components/Card";
-import PokemonInfo from "../components/PokemonInfo";
+import Card from "@components/Card";
+import PokemonInfo from "@components/PokemonInfo";
 
 import {
   Pokemon,
   PokemonType,
   PokemonAbility,
   PokemonStat,
-} from "../types/types";
-import Pokeball from "../images/pokeball.png";
+} from "@model/types";
+import Pokeball from "@images/pokeball.png";
 
 const PokemonData: Pokemon = {
   id: 0,

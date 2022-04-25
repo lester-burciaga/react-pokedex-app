@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Pokemon } from "../types/types";
+import { Pokemon } from "@model/types";
 
 interface IProps {
   pokemons: Pokemon[];
