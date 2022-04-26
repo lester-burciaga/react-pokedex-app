@@ -36,7 +36,7 @@ function Main() {
     setNextUrl(res.data.next);
     setPrevUrl(res.data.previous);
     getPokemon(res.data.results);
-    setLoading(false);
+    setLoading(false);    
   };
 
   function getTypes(types: any[]): PokemonType[] {
@@ -81,7 +81,7 @@ function Main() {
   };
 
   useEffect(() => {
-    getPokemonList();
+    getPokemonList();    
   }, [url]);
 
   return (
