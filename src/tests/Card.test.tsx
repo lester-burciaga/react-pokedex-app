@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Card from "../components/Card";
 import Pokeball from "../assets/images/pokeball.png";
 
@@ -40,10 +40,14 @@ describe("<Card />", () => {
     const name = screen.getByText(/bulbasaur/i);
     const type = screen.getByText(/grass/i);
     const image = screen.getByRole("img", { name: "bulbasaur" });
+    const pokemonCard = screen.getByRole("pokemonCard", { name: "1bulbasaur" });
 
     expect(idLabel).toBeInTheDocument();
     expect(name).toBeInTheDocument();
     expect(type).toBeInTheDocument();
     expect(image).toBeInTheDocument();
+
+    fireEvent.click(pokemonCard);
+    expect(mockPokedex).toHaveBeenCalledTimes(1);
   });
 });

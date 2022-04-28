@@ -19,6 +19,8 @@ function Card(props: IProps) {
             <div
               className={`pokemonCard ${item.types[0].type}`}
               key={item.id}
+              role="pokemonCard"
+              aria-label={`${item.id}${item.name}`}
               onClick={() => props.setInfoPokemon(item)}
             >
               <div className="description">

@@ -41,5 +41,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@images(.*)$": "<rootDir>/src/assets/images/$1",
+      "^@components(.*)$": "<rootDir>/src/components$1"
+    }
   }
 }
