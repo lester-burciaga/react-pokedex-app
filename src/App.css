@@ -5,9 +5,11 @@
   display: flex;
 }
 
-.left_content,
+.left_content {
+  flex-basis: 60%;
+}
 .right_content {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .left_content {
@@ -17,7 +19,7 @@
 }
 
 .right_content {
-  width: 50%;
+  width: 40%;
   text-align: center;
   color: #000000;
   position: fixed;
@@ -45,7 +47,7 @@
 .pokemonCard {
   position: relative;
   min-height: 120px;
-  width: 280px;
+  width: 260px;
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   padding: 0 1.5rem;

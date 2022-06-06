@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
-import { Pokemon } from "@model/types";
+import { Dispatch, SetStateAction } from 'react';
+import { Pokemon } from '@model/types';
 
 interface IProps {
   pokemons: Pokemon[];
@@ -8,31 +8,31 @@ interface IProps {
   setInfoPokemon: Dispatch<SetStateAction<Pokemon>>;
 }
 
-function Card(props: IProps) {
+function Card({ pokemons, loading, pokedex, setInfoPokemon }: IProps) {
   return (
     <>
-      {props.loading ? (
+      {loading ? (
         <h1>Loading...</h1>
       ) : (
-        props.pokemons.map((item: Pokemon) => {
+        pokemons.map((item: Pokemon) => {
           return (
             <div
               className={`pokemonCard ${item.types[0].type}`}
               key={item.id}
-              role="pokemonCard"
+              role='pokemonCard'
               aria-label={`${item.id}${item.name}`}
-              onClick={() => props.setInfoPokemon(item)}
+              onClick={() => setInfoPokemon(item)}
             >
-              <div className="description">
-                <p className="cardName">
+              <div className='description'>
+                <p className='cardName'>
                   <span>
                     <small>Id: {item.id}</small>&emsp;{item.name}
                   </span>
                 </p>
-                <div className="types">
+                <div className='types'>
                   {item.types.map((types, index) => {
                     return (
-                      <div key={index} className="pokemonType">
+                      <div key={index} className='pokemonType'>
                         {types.type}
                       </div>
                     );
@@ -43,7 +43,7 @@ function Card(props: IProps) {
                 src={item.image}
                 height={100}
                 width={100}
-                className="pokemonImage"
+                className='pokemonImage'
                 alt={item.name}
               />
             </div>
